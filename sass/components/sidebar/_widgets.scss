@@ -1,6 +1,6 @@
 .widget {
   position: relative;
-  padding: 0 1rem;
+  padding: 0.5rem 1rem;
   margin-bottom: 2.5rem;
   border: 1px solid $color__border;
   &::before {
@@ -15,6 +15,20 @@
     border: 1px solid $color__border;
     z-index: -1;
   }
+  ul,
+  ol {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    ul,
+    ol {
+      padding: 0 0 0.5rem 0.5rem;
+      margin: 0 0 0.5rem 0.5rem;
+    }
+  }
+  li {
+    padding: 0 0 1rem 0;
+  }
 }
 
 .widget-title {
@@ -23,6 +37,8 @@
   text-align: center;
   font-size: 1rem;
   text-transform: uppercase;
+  margin-bottom: 1rem;
+  margin-top: 0;
   &::after {
     content: "";
     display: block;
@@ -82,7 +98,7 @@
   }
   li {
     display: inline-block;
-    padding: 0.5rem 0;
+    padding: 0 0 1rem 0;
     border-bottom: 1px solid $color__border;
   }
 }

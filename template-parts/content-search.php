@@ -27,9 +27,13 @@
 
 	<div class="entry-summary">
 		<?php the_excerpt(); ?>
+		<div class="read-more-wrapper">
+			<a href="<?php the_permalink(); ?>" class="btn btn--outline">Read More</a>
+			<a href="<?php the_permalink(); ?>" class="btn btn--outline" target="_blank" ><i class="fas fa-external-link-alt"></i></a>
+		</div>
 	</div><!-- .entry-summary -->
 
-	<footer class="entry-footer">
+	<!-- <footer class="entry-footer">
 		<?php cerella_entry_footer(); ?>
-	</footer><!-- .entry-footer -->
+	</footer>.entry-footer -->
 </article><!-- #post-<?php the_ID(); ?> -->

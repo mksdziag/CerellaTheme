@@ -39,7 +39,7 @@
 				the_excerpt(); ?>
 				<div class="read-more-wrapper">
 					<a href="<?php the_permalink(); ?>" class="btn btn--outline">Read More</a>
-					<a href="<?php the_permalink(); ?>" class="btn btn--outline" target="_blank" >new</a>
+					<a href="<?php the_permalink(); ?>" class="btn btn--outline" target="_blank" ><i class="fas fa-external-link-alt"></i></a>
 				</div>
 
 			<?php

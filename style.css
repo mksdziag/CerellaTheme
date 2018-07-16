@@ -948,17 +948,23 @@ a:hover, a:active {
   }
 }
 
+.comment-navigation,
+.posts-navigation,
+.post-navigation {
+  margin: 2.5rem 0;
+}
+
 .site-main .comment-navigation, .site-main
 .posts-navigation, .site-main
 .post-navigation {
-  margin: 0 0 1.5em;
   overflow: hidden;
 }
 
 .comment-navigation .nav-previous,
 .posts-navigation .nav-previous,
 .post-navigation .nav-previous {
-  width: 100%;
+  float: left;
+  width: 80%;
   padding: 0.5rem 1rem;
   margin-bottom: 1rem;
   border-radius: 50px;
@@ -991,7 +997,6 @@ a:hover, a:active {
   .comment-navigation .nav-previous,
   .posts-navigation .nav-previous,
   .post-navigation .nav-previous {
-    float: left;
     width: 45%;
   }
 }
@@ -999,6 +1004,8 @@ a:hover, a:active {
 .comment-navigation .nav-next,
 .posts-navigation .nav-next,
 .post-navigation .nav-next {
+  width: 80%;
+  float: right;
   padding: 0.5rem 1rem;
   margin-bottom: 1rem;
   text-align: center;
@@ -1031,7 +1038,6 @@ a:hover, a:active {
   .comment-navigation .nav-next,
   .posts-navigation .nav-next,
   .post-navigation .nav-next {
-    float: right;
     width: 45%;
   }
 }
@@ -1514,6 +1520,7 @@ object {
 
 .entry-title {
   font-size: 1.25rem;
+  word-wrap: break-word;
 }
 
 .entry-title a {
@@ -1659,7 +1666,7 @@ object {
 --------------------------------------------------------------*/
 .widget {
   position: relative;
-  padding: 0 1rem;
+  padding: 0.5rem 1rem;
   margin-bottom: 2.5rem;
   border: 1px solid rgba(142, 160, 176, 0.15);
 }
@@ -1678,12 +1685,33 @@ object {
   z-index: -1;
 }
 
+.widget ul,
+.widget ol {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.widget ul ul,
+.widget ul ol,
+.widget ol ul,
+.widget ol ol {
+  padding: 0 0 0.5rem 0.5rem;
+  margin: 0 0 0.5rem 0.5rem;
+}
+
+.widget li {
+  padding: 0 0 1rem 0;
+}
+
 .widget-title {
   position: relative;
   padding: 0.5rem;
   text-align: center;
   font-size: 1rem;
   text-transform: uppercase;
+  margin-bottom: 1rem;
+  margin-top: 0;
 }
 
 .widget-title::after {
@@ -1745,7 +1773,7 @@ object {
 
 .widget_recent_entries li {
   display: inline-block;
-  padding: 0.5rem 0;
+  padding: 0 0 1rem 0;
   border-bottom: 1px solid rgba(142, 160, 176, 0.15);
 }
 
@@ -1802,10 +1830,6 @@ object {
 
 .main-promo__item-thumbnail {
   position: relative;
-}
-
-.main-promo__primary-item-title {
-  font-weight: 400;
 }
 
 .main-promo__primary-item-title a {
@@ -1888,6 +1912,49 @@ object {
 .entry-header--page {
   padding: 1rem 0;
   border-bottom: 2px solid rgba(142, 160, 176, 0.15);
+}
+
+/*--------------------------------------------------------------
+# Search
+--------------------------------------------------------------*/
+.content-area--search .page-header {
+  border-bottom: 2px solid rgba(142, 160, 176, 0.15);
+}
+
+.content-area--search .page-title {
+  font-weight: 400;
+}
+
+.content-area--search .page-title span {
+  font-weight: 700;
+}
+
+.content-area--search .post,
+.content-area--search .page {
+  position: relative;
+  padding: 1rem;
+  margin-bottom: 2.5rem;
+  border: 1px solid rgba(142, 160, 176, 0.15);
+}
+
+.content-area--search .post::before,
+.content-area--search .page::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: calc(100% + 10px);
+  width: calc(100% + 10px);
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  border: 1px solid rgba(142, 160, 176, 0.15);
+  z-index: -1;
+}
+
+.content-area--search .entry-meta,
+.content-area--search .entry-footer {
+  font-size: 0.85rem;
 }
 
 /*--------------------------------------------------------------

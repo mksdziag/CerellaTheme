@@ -162,13 +162,14 @@
 .comment-navigation,
 .posts-navigation,
 .post-navigation {
+  margin: 2.5rem 0;
   .site-main & {
-    margin: 0 0 1.5em;
     overflow: hidden;
   }
 
   .nav-previous {
-    width: 100%;
+    float: left;
+    width: 80%;
     padding: 0.5rem 1rem;
     margin-bottom: 1rem;
     border-radius: 50px;
@@ -188,12 +189,13 @@
       }
     }
     @include respond(tablet-land) {
-      float: left;
       width: 45%;
     }
   }
 
   .nav-next {
+    width: 80%;
+    float: right;
     padding: 0.5rem 1rem;
     margin-bottom: 1rem;
     text-align: center;
@@ -215,7 +217,6 @@
     }
 
     @include respond(tablet-land) {
-      float: right;
       width: 45%;
     }
   }
