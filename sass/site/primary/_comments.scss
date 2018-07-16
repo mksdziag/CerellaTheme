@@ -1,0 +1,89 @@
+.comment-content a {
+  word-wrap: break-word;
+}
+.bypostauthor {
+  display: block;
+}
+
+// custom
+.comments-area {
+  ul,
+  ol {
+    padding: 0 0 0 0.25rem;
+    margin: 0 0 5rem 0.75rem;
+    list-style: none;
+  }
+}
+
+.comment {
+  position: relative;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+  border: 1px solid $color__border;
+}
+
+.comment-body {
+}
+
+.comment-meta {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+}
+
+.comment-author {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+}
+
+.avatar {
+  margin-right: 0.5rem;
+  border-radius: 50%;
+}
+
+.says {
+  display: none;
+}
+
+.comment-content {
+}
+
+.reply {
+  a {
+    text-transform: uppercase;
+    color: $color__theme1;
+  }
+}
+
+// respond
+.comment-respond {
+  textarea {
+    background-color: $color__background-secondary;
+  }
+  input {
+    background-color: $color__background-secondary;
+  }
+}
+
+.comment-reply-title {
+}
+
+.comment-form {
+}
+
+.comment-form-comment {
+}
+
+.comment-form-author {
+}
+
+.comment-form-email {
+}
+
+.comment-form-url {
+}
+
+.comment-form-cookies-consent {
+}

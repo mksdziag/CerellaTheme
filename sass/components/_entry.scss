@@ -1,0 +1,39 @@
+.entry-header {
+  margin-bottom: 1rem;
+}
+
+.entry-title {
+  font-size: 1.25rem;
+  a {
+    color: $color__text-main;
+  }
+}
+
+.entry-content {
+  margin-top: 0;
+  font-size: 0.95rem;
+}
+
+.entry-read-more {
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+}
+
+.entry-footer {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+}
+
+.entry-meta,
+.posted-on,
+.byline,
+.author,
+.entry-date,
+.cat-links,
+.comments-link,
+.tags-links {
+  margin: 0 0.25rem;
+}

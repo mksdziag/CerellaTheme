@@ -1,0 +1,50 @@
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"],
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1rem;
+  @include font-size(0.75);
+  line-height: 1;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: $color__text-invert;
+  background: $color__background-button;
+  border: 1px solid $color__background-button;
+  border-radius: 1px;
+  transition: color 150ms ease-in, background-color 150ms ease-in,
+    border 150ms ease-in, background-color 150ms ease-in;
+  cursor: pointer;
+
+  &:hover {
+    border-color: $color__border-button-hover;
+    background-color: darken($color__background-button, 7.5%);
+  }
+
+  &:active,
+  &:focus {
+    border-color: $color__border-button-focus;
+  }
+}
+
+.btn--outline {
+  color: $color__background-button;
+  background-color: transparent;
+  cursor: pointer;
+  &:visited {
+    background-color: transparent;
+    border-color: $color__background-button;
+  }
+  &:hover {
+    background-color: transparent;
+    border-color: $color__theme3;
+  }
+}
+.btn--secondary {
+  background: $color__theme2;
+  border: 1px solid $color__theme2;
+  cursor: pointer;
+  &:hover {
+  }
+}
