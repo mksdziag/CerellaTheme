@@ -32,6 +32,19 @@
 
 .main-promo__item-thumbnail {
   position: relative;
+  &:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(
+      65deg,
+      rgba($color__theme1, 0.25),
+      rgba($color__theme2, 0.25)
+    );
+  }
 }
 
 .main-promo__primary-item-header {
