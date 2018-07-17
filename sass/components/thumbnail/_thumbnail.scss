@@ -1,4 +1,5 @@
 a.post-thumbnail {
+  display: block;
   position: relative;
   &:hover .thumbnail-link__overlay {
     opacity: 1;

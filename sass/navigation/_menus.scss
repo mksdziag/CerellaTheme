@@ -1,6 +1,12 @@
 .top-navigation-bar {
-  border-bottom: 1px solid $color__border;
+  position: fixed;
+  width: 100%;
+  border-bottom: 2px solid $color__border;
+  background-color: $color__background-body;
   z-index: 99;
+  height: 4rem;
+  display: flex;
+  align-items: center;
   .wrapper {
     display: flex;
     justify-content: space-between;
@@ -157,7 +163,7 @@
   position: relative;
   top: -0.5rem;
   left: -5rem;
-  transition: left 250ms ease-in;
+  transition: left 250ms ease-in, background-color 125ms ease-in;
 }
 @media screen and (min-width: 992px) {
   .menu-toggle {

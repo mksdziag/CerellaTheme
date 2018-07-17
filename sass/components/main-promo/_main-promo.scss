@@ -5,7 +5,7 @@
 .main-promo__inner {
   display: flex;
   flex-direction: column;
-  padding: 2rem 1rem;
+  padding: 1rem;
   @include respond(tablet-land) {
     flex-direction: row;
   }
@@ -22,7 +22,6 @@
 
 .main-promo__primary-item {
   padding: 1rem;
-  margin-bottom: 1rem;
   background-color: $color__background-body;
   box-shadow: 0.5rem 0.5rem 0.5rem -0.5rem $color__border;
   @include respond(tablet-land) {
