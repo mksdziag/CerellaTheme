@@ -30,9 +30,11 @@ get_header();
 				comments_template();
 			endif;
 
-		endwhile; // End of the loop.
-		?>
 
+			endwhile;
+
+      cerella_related_posts() ?>
+				
 		</main><!-- #main -->
 	</div><!-- #primary -->
 

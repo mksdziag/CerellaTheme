@@ -32,6 +32,7 @@
 
 .main-promo__item-thumbnail {
   position: relative;
+
   &:after {
     content: "";
     position: absolute;
@@ -41,8 +42,8 @@
     width: 100%;
     background-image: linear-gradient(
       65deg,
-      rgba($color__theme1, 0.25),
-      rgba($color__theme2, 0.25)
+      rgba($color__theme1, 0.15),
+      rgba($color__theme2, 0.15)
     );
   }
 }

@@ -169,4 +169,58 @@ if ( ! function_exists( 'cerella_post_categories' ) ) :
 endif;
 
 
+// ceralla categories for displaying categories in single post view
+if ( ! function_exists( 'cerella_related_posts' ) ) :
+	/**
+	 * Prints HTML posts in the same category as current post..
+	 */
+	function cerella_related_posts() {
+		$mainPostCategory = get_the_category( );
+		$mainPostCategoryID = $mainPostCategory[0] -> cat_ID;
+			
+		$the_query = new WP_Query( array(
+			'posts_per_page' => 4,
+			'ignore_sticky_posts' => true,
+			'cat' => $mainPostCategoryID,
+			'post__not_in' => array(get_the_ID()), 
+		)); ?>
+	
+		<section class="related-posts">
+			<h3 class="related-posts__title">Related Posts</h3>
+			<ul class="related-posts__list">
+				<?php 
+				while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
+					
+					<li class="related-posts__item">
+					
+					
+							<?php cerella_post_thumbnail(); ?>
+					
+						<div class="related-posts__content-wrapper">
 
+							<header class="related-posts__item-header">
+								<h3 class="related-posts__item-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+							</header>
+
+							<footer class="related-posts__item-footer">
+									<?php 
+										cerella_posted_on();
+										cerella_posted_by();
+										?>
+							</footer>
+
+						</div>
+
+					</li>
+
+				<?php endwhile; 
+				wp_reset_postdata(); 
+				
+				?>
+			
+			</ul> <!-- .related-posts__list -->
+		</section> <!-- .related-posts -->
+
+	<? 
+	}
+endif;

@@ -18,7 +18,7 @@
 .comment {
   position: relative;
   padding: 0.5rem;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
   font-size: 0.9rem;
   border: 1px solid $color__border;
 }
@@ -62,7 +62,7 @@
   textarea {
     background-color: $color__background-secondary;
   }
-  input {
+  input:not([type="submit"]) {
     background-color: $color__background-secondary;
   }
 }

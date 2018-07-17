@@ -22,9 +22,10 @@
 		</div><!-- .entry-meta -->
 		<?php endif; ?>
 	</header><!-- .entry-header -->
-
-	<?php cerella_post_thumbnail(); ?>
-
+		<!-- no thumbnail in search results -->
+		<!-- <?php cerella_post_thumbnail(); ?> -->
+		<!-- no thumbnail in search results -->
+		
 	<div class="entry-summary">
 		<?php the_excerpt(); ?>
 		<div class="read-more-wrapper">

@@ -33,10 +33,12 @@ input[type="submit"],
   background-color: transparent;
   cursor: pointer;
   &:visited {
+    color: $color__theme1;
     background-color: transparent;
     border-color: $color__background-button;
   }
   &:hover {
+    color: $color__theme3;
     background-color: transparent;
     border-color: $color__theme3;
   }
