@@ -172,7 +172,7 @@ endif;
 // ceralla categories for displaying categories in single post view
 if ( ! function_exists( 'cerella_related_posts' ) ) :
 	/**
-	 * Prints HTML posts in the same category as current post..
+	 * Prints HTML with link to posts in the same category as current post..
 	 */
 	function cerella_related_posts() {
 		$mainPostCategory = get_the_category( );
@@ -221,6 +221,6 @@ if ( ! function_exists( 'cerella_related_posts' ) ) :
 			</ul> <!-- .related-posts__list -->
 		</section> <!-- .related-posts -->
 
-	<? 
+	<?php
 	}
 endif;
