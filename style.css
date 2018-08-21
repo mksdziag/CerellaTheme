@@ -1166,10 +1166,11 @@ object {
       display: flex;
       align-items: center; }
       .post-on-index .post-thumbnail {
+        flex: 1;
         min-width: 300px;
         margin-right: 1rem; }
       .post-on-index .entry-wrapper {
-        flex-basis: 1;
+        flex: 2;
         margin-left: 1rem; } }
 
 .post-thumbnail {
