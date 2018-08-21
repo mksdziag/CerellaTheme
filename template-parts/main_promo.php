@@ -12,8 +12,8 @@
 
     <div class="main-promo__primary-item">
       
-      <div class="main-promo__item-thumbnail">
-        <?php cerella_post_thumbnail(); ?>
+      <div class="main-promo__post-thumbnail-wrapper">
+        <?php cerella_post_thumbnail('main-promo-bigger-thumb'); ?>
         <footer class="main-promo__item-footer">
           <?php 
             cerella_posted_on();
@@ -55,8 +55,8 @@
 
       <div class="main-promo__secondary-item">
         
-        <div class="main-promo__item-thumbnail">
-          <?php cerella_post_thumbnail(); ?>
+        <div class="main-promo__post-thumbnail-wrapper main-promo__post-thumbnail-wrapper--secondary">
+          <?php cerella_post_thumbnail('main-promo-thumb'); ?>
           <footer class="main-promo__item-footer">
             <?php 
               cerella_posted_on();

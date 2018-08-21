@@ -171,3 +171,8 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
+function cerella_theme_custom_thumbs() {
+	add_image_size( 'main-promo-thumb', 450, 300, false ); 
+	add_image_size( 'main-promo-bigger-thumb', 720, 375, true ); 
+}
+add_action( 'after_setup_theme', 'cerella_theme_custom_thumbs' );
