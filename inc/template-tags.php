@@ -169,7 +169,7 @@ if ( ! function_exists( 'cerella_post_categories' ) ) :
 endif;
 
 
-// ceralla categories for displaying categories in single post view
+// ceralla categories for displaying 4 posts prewievfrom the same category in single post view
 if ( ! function_exists( 'cerella_related_posts' ) ) :
 	/**
 	 * Prints HTML with link to posts in the same category as current post..
@@ -183,8 +183,9 @@ if ( ! function_exists( 'cerella_related_posts' ) ) :
 			'ignore_sticky_posts' => true,
 			'cat' => $mainPostCategoryID,
 			'post__not_in' => array(get_the_ID()), 
-		)); ?>
-	
+		));
+		
+		if ( $the_query->have_posts() ) : /* print related post section only if there is any related posts */ ?> 	
 		<section class="related-posts">
 			<h3 class="related-posts__title">Related Posts</h3>
 			<ul class="related-posts__list">
@@ -221,6 +222,6 @@ if ( ! function_exists( 'cerella_related_posts' ) ) :
 			</ul> <!-- .related-posts__list -->
 		</section> <!-- .related-posts -->
 
-	<?php
+	<?php endif;
 	}
 endif;
