@@ -3,6 +3,13 @@
   padding: 0.5rem 1rem;
   margin-bottom: 2.5rem;
   border: 5px double $color__border;
+  table,
+  td,
+  tr,
+  th {
+    border: 1px solid $color__border;
+    border-collapse: collapse;
+  }
 }
 ul,
 ol {
