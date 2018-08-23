@@ -1,12 +1,12 @@
 .top-navigation-bar {
   position: fixed;
+  display: flex;
+  align-items: center;
+  height: 4rem;
   width: 100%;
   border-bottom: 2px solid $color__border;
   background-color: $color__background-body;
   z-index: 99;
-  height: 4rem;
-  display: flex;
-  align-items: center;
   .wrapper {
     display: flex;
     justify-content: space-between;
@@ -18,8 +18,8 @@
   justify-content: center;
   align-items: center;
   padding: 0 1rem;
-  font-family: $font__secondary;
   font-size: 2rem;
+  font-family: $font__secondary;
   a {
     color: $color__theme1;
   }
@@ -132,6 +132,7 @@
 
   a {
     display: block;
+    color: lighten($color__text-main, 7.5%);
     text-decoration: none;
   }
 
@@ -186,25 +187,30 @@
     overflow: hidden;
   }
 
+  .nav-next,
   .nav-previous {
     float: left;
     width: 80%;
     padding: 0.5rem 1rem;
     margin-bottom: 1rem;
-    border-radius: 50px;
-    background-color: $color__background-secondary;
-    text-align: center;
     border: 1px solid $color__border;
+    border-radius: 50px;
+    text-align: center;
+    background-color: $color__background-secondary;
+    transition: background-color 100ms ease;
     a {
       display: block;
       height: 100%;
       color: $color__text-main;
+      transition: color 100 ease;
       &:visited {
         color: $color__text-main;
       }
-
-      &:hover {
-        color: $color__text-main;
+    }
+    &:hover {
+      background-color: $color__theme1;
+      a {
+        color: $color__background-body;
       }
     }
     @include respond(tablet-land) {
@@ -213,30 +219,6 @@
   }
 
   .nav-next {
-    width: 80%;
     float: right;
-    padding: 0.5rem 1rem;
-    margin-bottom: 1rem;
-    text-align: center;
-    background-color: $color__background-secondary;
-    border: 1px solid $color__border;
-    border-radius: 50px;
-
-    a {
-      display: block;
-      height: 100%;
-      color: $color__text-main;
-      &:visited {
-        color: $color__text-main;
-      }
-
-      &:hover {
-        color: $color__text-main;
-      }
-    }
-
-    @include respond(tablet-land) {
-      width: 45%;
-    }
   }
 }

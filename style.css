@@ -645,13 +645,13 @@ a {
 --------------------------------------------------------------*/
 .top-navigation-bar {
   position: fixed;
+  display: flex;
+  align-items: center;
+  height: 4rem;
   width: 100%;
   border-bottom: 2px solid rgba(133, 150, 167, 0.09);
   background-color: #fff;
-  z-index: 99;
-  height: 4rem;
-  display: flex;
-  align-items: center; }
+  z-index: 99; }
   .top-navigation-bar .wrapper {
     display: flex;
     justify-content: space-between; }
@@ -661,8 +661,8 @@ a {
   justify-content: center;
   align-items: center;
   padding: 0 1rem;
-  font-family: "Marck Script", cursive;
-  font-size: 2rem; }
+  font-size: 2rem;
+  font-family: "Marck Script", cursive; }
   .top-navigation-bar__logo-wrapper a {
     color: #83c6ce; }
 
@@ -742,6 +742,7 @@ a {
       border-bottom: 2px solid #e75a7c; }
   .main-navigation a {
     display: block;
+    color: #9ba9b7;
     text-decoration: none; }
   .main-navigation .current-menu-item {
     border-bottom: 2px solid #e75a7c; }
@@ -778,66 +779,64 @@ a {
   .posts-navigation, .site-main
   .post-navigation {
     overflow: hidden; }
+  .comment-navigation .nav-next,
   .comment-navigation .nav-previous,
+  .posts-navigation .nav-next,
   .posts-navigation .nav-previous,
+  .post-navigation .nav-next,
   .post-navigation .nav-previous {
     float: left;
     width: 80%;
     padding: 0.5rem 1rem;
     margin-bottom: 1rem;
+    border: 1px solid rgba(133, 150, 167, 0.09);
     border-radius: 50px;
-    background-color: #f7f5f2;
     text-align: center;
-    border: 1px solid rgba(133, 150, 167, 0.09); }
+    background-color: #f7f5f2;
+    transition: background-color 100ms ease; }
+    .comment-navigation .nav-next a,
     .comment-navigation .nav-previous a,
+    .posts-navigation .nav-next a,
     .posts-navigation .nav-previous a,
+    .post-navigation .nav-next a,
     .post-navigation .nav-previous a {
       display: block;
       height: 100%;
-      color: #8596a7; }
+      color: #8596a7;
+      transition: color 100 ease; }
+      .comment-navigation .nav-next a:visited,
       .comment-navigation .nav-previous a:visited,
+      .posts-navigation .nav-next a:visited,
       .posts-navigation .nav-previous a:visited,
+      .post-navigation .nav-next a:visited,
       .post-navigation .nav-previous a:visited {
         color: #8596a7; }
-      .comment-navigation .nav-previous a:hover,
-      .posts-navigation .nav-previous a:hover,
-      .post-navigation .nav-previous a:hover {
-        color: #8596a7; }
+    .comment-navigation .nav-next:hover,
+    .comment-navigation .nav-previous:hover,
+    .posts-navigation .nav-next:hover,
+    .posts-navigation .nav-previous:hover,
+    .post-navigation .nav-next:hover,
+    .post-navigation .nav-previous:hover {
+      background-color: #83c6ce; }
+      .comment-navigation .nav-next:hover a,
+      .comment-navigation .nav-previous:hover a,
+      .posts-navigation .nav-next:hover a,
+      .posts-navigation .nav-previous:hover a,
+      .post-navigation .nav-next:hover a,
+      .post-navigation .nav-previous:hover a {
+        color: #fff; }
     @media screen and (min-width: 768px) {
+      .comment-navigation .nav-next,
       .comment-navigation .nav-previous,
+      .posts-navigation .nav-next,
       .posts-navigation .nav-previous,
+      .post-navigation .nav-next,
       .post-navigation .nav-previous {
         width: 45%; } }
   .comment-navigation .nav-next,
   .posts-navigation .nav-next,
   .post-navigation .nav-next {
-    width: 80%;
-    float: right;
-    padding: 0.5rem 1rem;
-    margin-bottom: 1rem;
-    text-align: center;
-    background-color: #f7f5f2;
-    border: 1px solid rgba(133, 150, 167, 0.09);
-    border-radius: 50px; }
-    .comment-navigation .nav-next a,
-    .posts-navigation .nav-next a,
-    .post-navigation .nav-next a {
-      display: block;
-      height: 100%;
-      color: #8596a7; }
-      .comment-navigation .nav-next a:visited,
-      .posts-navigation .nav-next a:visited,
-      .post-navigation .nav-next a:visited {
-        color: #8596a7; }
-      .comment-navigation .nav-next a:hover,
-      .posts-navigation .nav-next a:hover,
-      .post-navigation .nav-next a:hover {
-        color: #8596a7; }
-    @media screen and (min-width: 768px) {
-      .comment-navigation .nav-next,
-      .posts-navigation .nav-next,
-      .post-navigation .nav-next {
-        width: 45%; } }
+    float: right; }
 
 /*--------------------------------------------------------------
 # Accessibility
