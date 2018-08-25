@@ -1,0 +1,19 @@
+.full-size-thumbnail__holder {
+  height: 40vh;
+  max-height: 100px;
+  background-size: cover;
+  background-attachment: fixed;
+  transition: all 200ms ease;
+  overflow: hidden;
+
+  @include respond(tablet) {
+    max-height: 300px;
+  }
+  @include respond(tablet-land) {
+    max-height: 450px;
+  }
+}
+.full-size-thumbnail__image {
+  width: 100%;
+  transform: translateY(-50%);
+}

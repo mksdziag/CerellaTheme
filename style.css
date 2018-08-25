@@ -1608,3 +1608,24 @@ a.post-thumbnail {
 .related-posts__item-footer {
   font-size: 0.75rem;
   margin-bottom: 1rem; }
+
+/*--------------------------------------------------------------
+# Templates
+--------------------------------------------------------------*/
+.full-size-thumbnail__holder {
+  height: 40vh;
+  max-height: 100px;
+  background-size: cover;
+  background-attachment: fixed;
+  transition: all 200ms ease;
+  overflow: hidden; }
+  @media screen and (min-width: 576px) {
+    .full-size-thumbnail__holder {
+      max-height: 300px; } }
+  @media screen and (min-width: 768px) {
+    .full-size-thumbnail__holder {
+      max-height: 450px; } }
+
+.full-size-thumbnail__image {
+  width: 100%;
+  transform: translateY(-50%); }
