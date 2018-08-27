@@ -1,7 +1,7 @@
 const holder = document.querySelector('.full-size-thumbnail__holder');
 const image = document.querySelector('.full-size-thumbnail__image');
 console.log(holder, image);
-if (holder !== undefined) {
+if (holder !== null) {
   window.addEventListener('scroll', function() {
     requestAnimationFrame(parallax);
   });
